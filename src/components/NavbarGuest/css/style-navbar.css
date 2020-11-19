@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 html,
 body {
@@ -71,4 +72,9 @@ body {
 .header .header__content .navbar .address .dropdown-item:hover {
   background: #60c5ef;
   color: white;
+}
+
+.header .brand-name {
+  color: rgb(138, 27, 27);
+  font-family: "Righteous", cursive;
 }

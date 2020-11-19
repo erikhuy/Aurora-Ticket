@@ -33,28 +33,7 @@ export default class NavbarGuest extends Component {
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
-                  <ul className="navbar-nav">
-                    <li className="nav-item active">
-                      <a className="nav-link" href="#">
-                        Lịch chiếu{" "}
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#">
-                        Cụm rạp{" "}
-                      </a>
-                    </li>
-                    {/* <li className="nav-item">
-                      <a className="nav-link" href="#">
-                        Tin Tức
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#">
-                        Ứng dụng
-                      </a>
-                    </li> */}
-                  </ul>
+                  <h1 className="brand-name">Aurora Ticket</h1>
                 </div>
                 <div className="log-in">
                   <a href="#">
