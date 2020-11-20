@@ -1,17 +1,9 @@
-import React, { Component } from "react";
-import "./css/style.css";
+import React from "react";
 
-export default class HomePage extends Component {
-  render() {
-    console.log("homepage is loaded");
-    return (
-      <div>
-        <h1>HomePage</h1>
-        <h1>HomePage</h1>
-        <h1>HomePage</h1>
-        <h1>HomePage</h1>
-        <h1>HomePage</h1>
-      </div>
-    );
-  }
+export default function index() {
+  return (
+    <div>
+      <h1>Home Page</h1>
+    </div>
+  );
 }

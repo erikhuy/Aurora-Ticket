@@ -30,7 +30,7 @@ export default function PageNotFound() {
                 Sorry bit the page you are looking for does not exist, have been
                 removed or name changed.
               </p>
-              <a href="#" class="btn btn-primary btn-round">
+              <a href="<?=base_url()?>" class="btn btn-primary btn-round">
                 Go to homepage
               </a>
             </div>
