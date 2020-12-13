@@ -5,6 +5,10 @@ import CarouselMovie from "../../../components/CarouselMovie";
 import {actNowPlaying5MovieAPI} from "./modules/actions";
 import MovieCard from "../../../components/MovieCard";
 import {connect} from "react-redux";
+import Loader from "../../../components/Loader";
+import FooterGuest from "../../../components/FooterGuest";
+import BannerCarousel from "../../../components/BannerCarousel";
+
 
 class HomePage extends Component {
 
@@ -15,10 +19,6 @@ class HomePage extends Component {
     //Get data from props
     componentDidMount() {
         this.props.nowPlayingListAPI();
-    }
-
-    renderHeroHeaderGuest = () => {
-        return <HeroHeaderGuest/>
     }
 
     //TODO: render component CarouselMovie => goi component => trong component nay, nhan ve nowPlayingList roi map, moi lan map goi MovieCard
@@ -44,17 +44,15 @@ class HomePage extends Component {
     render() {
         console.log("HomePage render is called.")
         const {loading} = this.props;
-        console.log("loading is: " + loading);
+
         if (loading) {
             console.log("Page is loading. (Loading = true)")
-            return (<div>Loading</div>)
+            return <Loader />
         }
-
         return (
             <div>
-                {/*<HeroHeaderGuest/>*/}
-                {this.renderHeroHeaderGuest()}
 
+                <BannerCarousel />
                 {/* ========== 2- COMPONENT Carousel ========== */}
                 <div className="now-playing">
                     <div className="container my-4">
@@ -64,45 +62,8 @@ class HomePage extends Component {
                 </div>
                 {/* ========== End COMPONENT Carousel ========== */}
 
-                {/* ========== 3 - BANNER Carousel Bootstrap ========= */}
-
-                <div
-                    id="carouselExampleFade"
-                    className="carousel slide carousel-fade"
-                    data-ride="carousel"
-                >
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img src="img/banner-1.png" className="d-block w-100" alt="..."/>
-                        </div>
-                        <div className="carousel-item">
-                            <img src="img/banner-2.png" className="d-block w-100" alt="..."/>
-                        </div>
-                    </div>
-                    <a
-                        className="carousel-control-prev"
-                        href="#carouselExampleFade"
-                        role="button"
-                        data-slide="prev"
-                    >
-                        <span className="carousel-control-prev-icon" aria-hidden="true"/>
-                        <span className="sr-only">Previous</span>
-                    </a>
-                    <a
-                        className="carousel-control-next"
-                        href="#carouselExampleFade"
-                        role="button"
-                        data-slide="next"
-                    >
-                        <span className="carousel-control-next-icon" aria-hidden="true"/>
-                        <span className="sr-only">Next</span>
-                    </a>
-                </div>
-
-                {/* ========== 3 - BANNER Carousel End =============== */}
-
                 {/* ========== 4- COMPONENT Carousel: Trending ========== */}
-                <div className="now-playing">
+                <div className="now-playing-2">
                     <div className="container my-4">
                         <h3>trending</h3>
                         {/*Carousel Wrapper*/}
@@ -277,21 +238,21 @@ class HomePage extends Component {
                 {/* ========== 4 - End COMPONENT Carousel: Trending ========== */}
 
                 {/* ========== 5- Genres ========== */}
-                <div class="genre container">
-                    <div class="genre__content">
-                        <a class="btn-genre" href="#" role="button">
+                <div className="genre container">
+                    <div className="genre__content">
+                        <a className="btn-genre" href="#" role="button">
                             sci-fi
                         </a>
-                        <a class="btn-genre" href="#" role="button">
+                        <a className="btn-genre" href="#" role="button">
                             romance
                         </a>
-                        <a class="btn-genre" href="#" role="button">
+                        <a className="btn-genre" href="#" role="button">
                             comedy
                         </a>
-                        <a class="btn-genre" href="#" role="button">
+                        <a className="btn-genre" href="#" role="button">
                             horror
                         </a>
-                        <a class="btn-genre" href="#" role="button">
+                        <a className="btn-genre" href="#" role="button">
                             action
                         </a>
                     </div>
@@ -484,6 +445,7 @@ class HomePage extends Component {
 
                 {/* ========== 8- Services  ========== */}
 
+                <FooterGuest/>
             </div>
         );
     }

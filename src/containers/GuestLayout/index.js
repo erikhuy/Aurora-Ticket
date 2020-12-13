@@ -6,10 +6,10 @@ import NavbarGuest from "../../components/NavbarGuest";
 function GuestRender(props) {
   return (
     <div>
+      {/*  Cai nay chay truoc loading page va de len html*/}
       <NavbarGuest />
       {props.children}
-      <FooterGuest />
-      {/* {props.children} */}
+      {/*<FooterGuest />*/}
     </div>
   );
 }

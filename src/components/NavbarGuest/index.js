@@ -4,12 +4,8 @@ import "./css/style-navbar.css";
 export default class NavbarGuest extends Component {
   render() {
     return (
-      <div>
-        {/* ============ Nav Bar =========== */}
-
-        <div>
-          <header className="header">
-            <div className="header__content container">
+        <div className="header">
+            <div className="header__content container-fluid">
               <nav className="navbar navbar-expand-lg row">
                 <a className="navbar-brand col-sm-4" href="#">
                   <img
@@ -35,7 +31,7 @@ export default class NavbarGuest extends Component {
                 >
                   <h1 className="brand-name">Aurora Ticket</h1>
                 </div>
-                <div className="col-sm-4 d-flex">
+                <div className="col-sm-4 navbar-right">
                   <div className="log-in">
                     <a href="#">
                       <i class="fas fa-angle-right mr-2"></i>
@@ -97,11 +93,7 @@ export default class NavbarGuest extends Component {
                 </div>
               </nav>
             </div>
-          </header>
         </div>
-
-        {/* End Navbar */}
-      </div>
     );
   }
 }

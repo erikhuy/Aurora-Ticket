@@ -9,10 +9,10 @@ body {
 .header .header__content .navbar {
   position: fixed;
   top: -1px;
-  left: 0;
+  /*left: 0;*/
   width: 100%;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   z-index: 9;
   transition: all 0.2s;
@@ -77,4 +77,9 @@ body {
 .header .brand-name {
   color: rgb(138, 27, 27);
   font-family: "Righteous", cursive;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: flex-end;
 }
